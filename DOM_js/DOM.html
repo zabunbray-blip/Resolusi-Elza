@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="judul">Tolong tekan tombol dibawah</h2>
+    <button id="btnubah">Klik disini</button>
+
+    <script>
+        const btn = document.getElementById("btnubah");
+        const judul = document.getElementById("judul");
+
+        btn.addEventListener('click' , function() {
+            judul.textContent = 'Tombol Sudah Di Klik';
+            judul.style.color ='white';
+            judul.style.backgroundColor = 'black';
+            btn.style.backgroundColor = "black";
+            btn.style.color = 'white';
+        });
+    </script>
+</body>
+</html>

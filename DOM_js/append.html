@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tambah Input Dinamis</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input {
+      display: block;
+      margin: 8px 0;
+      padding: 6px;
+      width: 250px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form Dinamis</h2>
+  <div id="container">
+    <!-- Input baru akan muncul di sini -->
+  </div>
+  <button id="tambahInput">Tambah Input</button>
+  <button id="lihatNilai">Lihat Semua Nilai</button>
+
+  <script>
+    const container = document.getElementById('container');
+    const btnTambah = document.getElementById('tambahInput');
+    const btnLihat = document.getElementById('lihatNilai');
+
+    btnTambah.addEventListener('click', function() {
+      // 1️⃣ Buat elemen input baru
+      const inputBaru = document.createElement('input');
+      inputBaru.type = 'text';
+      inputBaru.placeholder = 'Isi data...';
+
+      // 2️⃣ Masukkan input ke container
+      container.appendChild(inputBaru);
+    });
+
+    btnLihat.addEventListener('click', function() {
+      // Ambil semua input di container
+      const semuaInput = container.querySelectorAll('input');
+
+      semuaInput.forEach((input, index) => {
+        console.log(`Input ke-${index + 1}: ${input.value}`);
+      });
+      alert('Cek console browser untuk melihat nilai input!');
+    });
+  </script>
+
+</body>
+</html>

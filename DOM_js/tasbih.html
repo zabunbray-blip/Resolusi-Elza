@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form{ 
+            background-color: grey;
+            margin-left: 35%;
+            margin-right: 35%;
+            margin-top: 20%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        div{
+            background-color: red;
+            margin: 10%;
+        }
+    </style>
+<body>
+    <div class="form">
+        <div>
+            <h1 id="layarangka">0</h1>
+            <button id="btn">tambah</button>
+            <button id="btnkurang">kurang </button>
+        </div>
+    </div>
+
+    <script>
+        let angka = 0;
+
+        const display = document.getElementById('layarangka');
+        const button = document.getElementById('btn');
+        const btnmin = document.getElementById('btnkurang');
+        
+        button.addEventListener('click' , function(){
+            angka++
+            display.innerHTML = angka;
+        });
+        btnmin.addEventListener('click' , function(){
+            angka--
+            display.innerHTML = angka;
+        });
+
+    </script>
+
+</body>
+</html>
